@@ -45,14 +45,14 @@ button {
     font-size: 25px;
 }
 
-.pt-header {
+.pt-header, .stopwatch-header {
     text-transform: uppercase;
     letter-spacing: 5px;
     text-align: center;
     margin: 10px;
 }
 
-.counter {
+.counter, .timer {
     text-align: center;
     margin: 10px;
     font-size: 50px;

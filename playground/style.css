@@ -52,6 +52,13 @@ button {
     margin: 10px;
 }
 
+.splits {
+    text-align: center;
+    margin: 10px;
+    font-size: 25px;
+    
+}
+
 .counter, .timer {
     text-align: center;
     margin: 10px;

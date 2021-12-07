@@ -2,11 +2,14 @@ let seconds = 00;
 let milliseconds = 00;
 let interval;
 let isRunning = false;
+let splits = []
+
 
 const millisecondsText = document.getElementById('milliseconds');
 const secondsText= document.getElementById('seconds');
 const swstartstop = document.querySelector('.sw-start-stop');
 const swreset = document.querySelector('.sw-reset');
+const splitsText = document.querySelector('.splits');
 
 const startStopStopwatch = () => {
     if (isRunning == false) { 
@@ -27,6 +30,16 @@ const restartStopwatch = () => {
     seconds = "00";
     millisecondsText.innerHTML = milliseconds;
     secondsText.innerHTML = seconds;
+}
+
+const addSplit = () => {
+    splits.push(" " + seconds + ":" + milliseconds);
+    splitsText.innerHTML = splits;
+}
+
+const clearSplits = () => {
+    splits = [];
+    splitsText.innerHTML = "";
 }
 
 const timerLogic = () => {

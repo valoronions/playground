@@ -27,9 +27,12 @@
         </nav>
         <h1 class="stopwatch-header">Stopwatch</h1>
         <h2 class="timer"><span id="seconds">00</span>:<span id="milliseconds">00</span></h2>
+        <h3 class="splits"></h3>
         <div class="controls">
             <button class="sw-start-stop" onclick="startStopStopwatch()">Start</button>
             <button class="sw-reset" onclick="restartStopwatch()">Reset</button>
+            <button class="sw-split" onclick="addSplit()">Add Split</button>
+            <button class="sw-splitnt" onclick="clearSplits()">Clear Splits</button>
         </div>
         <script src="two.js"></script>
         <script src="script.js"></script>

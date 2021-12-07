@@ -1,2 +1,2 @@
 # playground
-Me when i learn web design
+I am learning web design

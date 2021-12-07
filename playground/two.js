@@ -1,21 +1,24 @@
 let seconds = 00;
 let milliseconds = 00;
 let interval;
-
+let isRunning = false;
 
 const millisecondsText = document.getElementById('milliseconds');
 const secondsText= document.getElementById('seconds');
-const swstart = document.querySelector('.sw-start');
-const swstop = document.querySelector('.sw-stop');
+const swstartstop = document.querySelector('.sw-start-stop');
 const swreset = document.querySelector('.sw-reset');
 
-const startStopwatch = () => {
-    clearInterval(interval);
-    interval = setInterval(timerLogic, 10);
-}
-
-const stopStopwatch = () => {
-    clearInterval(interval);
+const startStopStopwatch = () => {
+    if (isRunning == false) { 
+        clearInterval(interval);
+        interval = setInterval(timerLogic, 10);
+        swstartstop.innerHTML = "Stop";
+        isRunning = true;
+    } else {
+        clearInterval(interval);
+        swstartstop.innerHTML = "Start";
+        isRunning = false;
+    }
 }
 
 const restartStopwatch = () => {

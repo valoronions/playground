@@ -24,6 +24,7 @@ const reset = () => {
 
 const automate = () => {
     if (alreadyCounting == false) {
+        clearInterval(interval);
         interval = setInterval("auto()", 1000);
         btnAuto.innerHTML = "Stop"
     } else {
